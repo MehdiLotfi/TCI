@@ -1,4 +1,5 @@
-﻿using TCI.DomainService.Usr;
+﻿using System.Security.Cryptography;
+using TCI.DomainService.Usr;
 
 namespace TCI.Operation.Usr
 {
@@ -7,6 +8,13 @@ namespace TCI.Operation.Usr
         public UserOperation(UserService userService)
             : base(userService)
         {
+        }
+
+        public bool Login(string userName, string password)
+        {
+            var algoritm = new SHA256Managed();
+
+            return true;
         }
     }
 }
