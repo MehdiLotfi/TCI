@@ -59,6 +59,10 @@
       <Project>{9CA7D934-BDE2-4E19-B366-1FB585F5A33D}</Project>
       <Name>TCI.Mapper</Name>
     </ProjectReference>
+    <ProjectReference Include="..\TCI.Core\TCI.Core.csproj">
+      <Project>{F7822211-4806-4240-B05C-792C1832E776}</Project>
+      <Name>TCI.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TCI.Domain\TCI.Domain.csproj">
       <Project>{77EC1366-2803-4396-BAB1-A2CACDCCC058}</Project>
       <Name>TCI.Domain</Name>

@@ -1,4 +1,5 @@
-﻿using System.Security.Cryptography;
+﻿using System;
+using System.Linq.Expressions;
 using TCI.DomainService.Usr;
 
 namespace TCI.Operation.Usr
@@ -12,9 +13,12 @@ namespace TCI.Operation.Usr
 
         public bool Login(string userName, string password)
         {
-            var algoritm = new SHA256Managed();
-
-            return true;
+            var user = BaseService.GetFirst(x => x.UserName == userName);
+            if (user == null)
+            {
+                return false;
+            }
+            return PasswordHash.PasswordHash.ValidatePassword(password, user.Password);
         }
     }
 }

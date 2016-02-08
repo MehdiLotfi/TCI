@@ -18,8 +18,6 @@ namespace TCI.Domain.Usr
 
         public Person Person { get; set; }
 
-        public string SoltPassword { get; set; }
-
         public string Password { get; set; }
     }
 }

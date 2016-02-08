@@ -12,17 +12,17 @@ namespace TCI.Operation
         where TEntity : BaseEntity
         where TModel : BaseModel
     {
-        private readonly BaseService<TEntity> _baseService;
+        protected readonly BaseService<TEntity> BaseService;
 
         protected BaseOperation(BaseService<TEntity> baseService)
         {
             (new BaseMapper<TEntity, TModel>()).Register();
-            _baseService = baseService;
+            BaseService = baseService;
         }
 
         public List<TModel> GetAll()
         {
-            return _baseService.GetAll().ProjectTo<TModel>().ToList();
+            return BaseService.GetAll().ProjectTo<TModel>().ToList();
         }
     }
 }
