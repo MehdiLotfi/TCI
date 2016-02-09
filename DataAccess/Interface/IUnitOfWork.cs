@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
 using TCI.Domain;
 
-namespace TCI.DataAccess
+namespace TCI.DataAccess.Interface
 {
     public interface IUnitOfWork
     {

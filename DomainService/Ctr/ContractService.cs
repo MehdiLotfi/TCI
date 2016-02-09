@@ -1,11 +1,13 @@
 ﻿using TCI.DataAccess;
+using TCI.DataAccess.Interface;
 using TCI.Domain;
+using TCI.DomainService.Ctr.Interface;
 
 namespace TCI.DomainService.Ctr
 {
-    public class ContractService : BaseService<Contract>
+    public class ContractService : BaseService<Contract>, IContractService
     {
-        public ContractService(IUnitOfWork unitOfWork)
+        public ContractService(ISupervisionUnitOfWork unitOfWork)
             : base(unitOfWork)
         {
         }

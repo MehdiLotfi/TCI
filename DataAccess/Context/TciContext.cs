@@ -1,20 +1,16 @@
 ﻿using System.Data.Entity;
+using TCI.DataAccess.Interface;
 using TCI.Domain;
 
-namespace TCI.DataAccess
+namespace TCI.DataAccess.Context
 {
     public class TciContext : DbContext, IUnitOfWork
     {
-        public TciContext()
-            : base("TCIConnectionString")
+        public TciContext(string connectionString)
+            : base(connectionString)
         {
 
         }
-
-        #region DbSet
-        public DbSet<LegalPerson> LegalPersons { get; set; }
-        public DbSet<RealPerson> RealPersons { get; set; }
-        #endregion
 
         public IDbSet<TEntity> DbSet<TEntity>() where TEntity : BaseEntity
         {

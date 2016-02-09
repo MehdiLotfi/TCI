@@ -49,8 +49,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IUnitOfWork.cs" />
-    <Compile Include="TciContext.cs" />
+    <Compile Include="Context\FiberContext.cs" />
+    <Compile Include="Context\SsoContext.cs" />
+    <Compile Include="Context\SupervisionContext.cs" />
+    <Compile Include="Interface\IFiberUnitOfWork.cs" />
+    <Compile Include="Interface\ISsoUnitOfWork.cs" />
+    <Compile Include="Interface\ISupervisionUnitOfWork.cs" />
+    <Compile Include="Interface\IUnitOfWork.cs" />
+    <Compile Include="Context\TciContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
