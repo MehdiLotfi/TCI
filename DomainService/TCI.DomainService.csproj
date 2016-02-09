@@ -52,7 +52,9 @@
     <Compile Include="BaseService.cs" />
     <Compile Include="Ctr\ContractService.cs" />
     <Compile Include="Ctr\ExecuterService.cs" />
+    <Compile Include="IBaseService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usr\Interface\IUserService.cs" />
     <Compile Include="Usr\UserService.cs" />
   </ItemGroup>
   <ItemGroup>

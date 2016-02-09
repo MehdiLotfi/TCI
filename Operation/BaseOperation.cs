@@ -8,7 +8,7 @@ using TCI.Model;
 
 namespace TCI.Operation
 {
-    public abstract class BaseOperation<TEntity, TModel>
+    public abstract class BaseOperation<TEntity, TModel> : IBaseOperation<TEntity, TModel>
         where TEntity : BaseEntity
         where TModel : BaseModel
     {

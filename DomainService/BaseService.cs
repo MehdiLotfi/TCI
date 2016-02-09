@@ -7,7 +7,7 @@ using TCI.Domain;
 
 namespace TCI.DomainService
 {
-    public abstract class BaseService<TEntity>
+    public abstract class BaseService<TEntity> : IBaseService<TEntity>
         where TEntity : BaseEntity
     {
         private IUnitOfWork _unitOfWork;
