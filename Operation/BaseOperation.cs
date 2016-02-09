@@ -12,9 +12,9 @@ namespace TCI.Operation
         where TEntity : BaseEntity
         where TModel : BaseModel
     {
-        protected readonly BaseService<TEntity> BaseService;
+        protected readonly IBaseService<TEntity> BaseService;
 
-        protected BaseOperation(BaseService<TEntity> baseService)
+        protected BaseOperation(IBaseService<TEntity> baseService)
         {
             (new BaseMapper<TEntity, TModel>()).Register();
             BaseService = baseService;
