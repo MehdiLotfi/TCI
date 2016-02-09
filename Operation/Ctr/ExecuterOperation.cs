@@ -2,7 +2,7 @@
 
 namespace TCI.Operation.Ctr
 {
-    public class ExecuterOperation : BaseOperation<Domain.Ctr.Executer, Model.Ctr.Executer>
+    public class ExecuterOperation : BaseOperation<Domain.Executer, Model.Executer>
     {
         public ExecuterOperation(ExecuterService executerService)
             : base(executerService)

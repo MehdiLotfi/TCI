@@ -1,6 +1,5 @@
 ﻿using System.Data.Entity;
 using TCI.Domain;
-using TCI.Domain.Per;
 
 namespace TCI.DataAccess
 {

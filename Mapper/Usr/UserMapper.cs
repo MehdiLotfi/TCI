@@ -1,8 +1,8 @@
-﻿using TCI.Domain.Per;
+﻿using TCI.Domain;
 
 namespace TCI.Mapper.Usr
 {
-    public class UserMapper : BaseMapper<Domain.Usr.User, Model.Usr.User>
+    public class UserMapper : BaseMapper<Domain.User, Model.User>
     {
         public override void Register()
         {

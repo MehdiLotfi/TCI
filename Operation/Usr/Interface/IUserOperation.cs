@@ -1,7 +1,7 @@
 ﻿namespace TCI.Operation.Usr.Interface
 {
-    public interface IUserOperation : IBaseOperation<Domain.Usr.User, Model.Usr.User>
+    public interface IUserOperation : IBaseOperation<Domain.User, Model.User>
     {
-        Model.Usr.User Login(Model.Usr.Login login);
+        Model.User Login(Model.Login login);
     }
 }

@@ -1,5 +1,5 @@
 ﻿using TCI.DataAccess;
-using TCI.Domain.Ctr;
+using TCI.Domain;
 
 namespace TCI.DomainService.Ctr
 {

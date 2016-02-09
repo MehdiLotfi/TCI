@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,26 +42,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseEntity.cs" />
-    <Compile Include="Ctr\Contract.cs" />
-    <Compile Include="Ctr\ContractController.cs" />
-    <Compile Include="Ctr\ContractItem.cs" />
-    <Compile Include="Ctr\ContractItemType.cs" />
-    <Compile Include="Ctr\Executer.cs" />
-    <Compile Include="Ctr\Letter\ContractLetter.cs" />
-    <Compile Include="Ctr\Letter\DefiniteDelivery.cs" />
-    <Compile Include="Ctr\Letter\TemporaryDelivery.cs" />
-    <Compile Include="Frm\Cluser\CluserPost.cs" />
-    <Compile Include="Ctr\Controller.cs" />
-    <Compile Include="Frm\Form.cs" />
-    <Compile Include="Frm\FormVerifyItem.cs" />
-    <Compile Include="Frm\VerifyItemType.cs" />
+    <Compile Include="Domain\BaseEntity.cs" />
+    <Compile Include="Domain\Ctr\Contract.cs" />
+    <Compile Include="Domain\Ctr\ContractController.cs" />
+    <Compile Include="Domain\Ctr\ContractItem.cs" />
+    <Compile Include="Domain\Ctr\ContractItemType.cs" />
+    <Compile Include="Domain\Ctr\Executer.cs" />
+    <Compile Include="Domain\Ctr\Letter\ContractLetter.cs" />
+    <Compile Include="Domain\Ctr\Letter\DefiniteDelivery.cs" />
+    <Compile Include="Domain\Ctr\Letter\TemporaryDelivery.cs" />
+    <Compile Include="Domain\Fiber\Station.cs" />
+    <Compile Include="Domain\Frm\Cluser\CluserPost.cs" />
+    <Compile Include="Domain\Ctr\Controller.cs" />
+    <Compile Include="Domain\Frm\Form.cs" />
+    <Compile Include="Domain\Frm\FormVerifyItem.cs" />
+    <Compile Include="Domain\Frm\VerifyItemType.cs" />
+    <Compile Include="Enums\StationType.cs" />
     <Compile Include="Enums\VerifyStateType.cs" />
-    <Compile Include="Per\LegalPerson.cs" />
-    <Compile Include="Per\Person.cs" />
-    <Compile Include="Per\RealPerson.cs" />
+    <Compile Include="Domain\Per\LegalPerson.cs" />
+    <Compile Include="Domain\Per\Person.cs" />
+    <Compile Include="Domain\Per\RealPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usr\User.cs" />
+    <Compile Include="Domain\Usr\User.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
