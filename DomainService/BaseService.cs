@@ -29,5 +29,26 @@ namespace TCI.DomainService
         {
             return predicate == null ? _entities.First() : _entities.Where(predicate).First();
         }
+
+        public void Add(TEntity entity)
+        {
+            _entities.Attach(entity);
+        }
+
+        public void Update(TEntity entity)
+        {
+            _entities.Attach(entity);
+            _unitOfWork.Entry(entity).State = EntityState.Modified;
+        }
+
+        public void Delete(TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Save()
+        {
+            _unitOfWork.SaveChanges();
+        }
     }
 }
