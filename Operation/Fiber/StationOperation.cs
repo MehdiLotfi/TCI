@@ -1,4 +1,5 @@
 ﻿using TCI.DomainService.Fiber.Interface;
+using TCI.Mapper.Fiber;
 using TCI.Operation.Fiber.Interface;
 
 namespace TCI.Operation.Fiber
@@ -8,6 +9,7 @@ namespace TCI.Operation.Fiber
         public StationOperation(IStationService stationService)
             : base(stationService)
         {
+            (new StationMapper()).Initialize();
         }
 
         public Model.Station GetDetails(int id)

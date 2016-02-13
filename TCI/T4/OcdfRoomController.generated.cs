@@ -62,6 +62,12 @@ namespace TCI.Controllers
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
         }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult Details()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Details);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public OcdfRoomController Actions { get { return MVC.OcdfRoom; } }
@@ -79,12 +85,14 @@ namespace TCI.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string Details = "Details";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string Details = "Details";
         }
 
 
@@ -96,6 +104,14 @@ namespace TCI.Controllers
         {
             public readonly string stationId = "stationId";
         }
+        static readonly ActionParamsClass_Details s_params_Details = new ActionParamsClass_Details();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Details DetailsParams { get { return s_params_Details; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Details
+        {
+            public readonly string ocdfRoomId = "ocdfRoomId";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -106,8 +122,10 @@ namespace TCI.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string Details = "Details";
                 public readonly string Index = "Index";
             }
+            public readonly string Details = "~/Views/OcdfRoom/Details.cshtml";
             public readonly string Index = "~/Views/OcdfRoom/Index.cshtml";
         }
     }
@@ -126,6 +144,18 @@ namespace TCI.Controllers
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "stationId", stationId);
             IndexOverride(callInfo, stationId);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void DetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, int ocdfRoomId);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Details(int ocdfRoomId)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Details);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "ocdfRoomId", ocdfRoomId);
+            DetailsOverride(callInfo, ocdfRoomId);
             return callInfo;
         }
 

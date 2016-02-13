@@ -25,13 +25,10 @@ using System.Web.Routing;
 using T4MVC;
 namespace TCI.Controllers
 {
-    public partial class T4OWBController
+    public partial class CableController
     {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public T4OWBController() { }
-
-        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        protected T4OWBController(Dummy d) { }
+        protected CableController(Dummy d) { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         protected RedirectToRouteResult RedirectToAction(ActionResult result)
@@ -59,15 +56,21 @@ namespace TCI.Controllers
             return RedirectToActionPermanent(taskResult.Result);
         }
 
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult StationFreeCable()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.StationFreeCable);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public T4OWBController Actions { get { return MVC.T4OWB; } }
+        public CableController Actions { get { return MVC.Cable; } }
         [GeneratedCode("T4MVC", "2.0")]
         public readonly string Area = "";
         [GeneratedCode("T4MVC", "2.0")]
-        public readonly string Name = "T4OWB";
+        public readonly string Name = "Cable";
         [GeneratedCode("T4MVC", "2.0")]
-        public const string NameConst = "T4OWB";
+        public const string NameConst = "Cable";
         [GeneratedCode("T4MVC", "2.0")]
         static readonly ActionNamesClass s_actions = new ActionNamesClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -75,16 +78,24 @@ namespace TCI.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass
         {
-            public readonly string Index = "Index";
+            public readonly string StationFreeCable = "StationFreeCable";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
-            public const string Index = "Index";
+            public const string StationFreeCable = "StationFreeCable";
         }
 
 
+        static readonly ActionParamsClass_StationFreeCable s_params_StationFreeCable = new ActionParamsClass_StationFreeCable();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_StationFreeCable StationFreeCableParams { get { return s_params_StationFreeCable; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_StationFreeCable
+        {
+            public readonly string stationId = "stationId";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -95,23 +106,26 @@ namespace TCI.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string StationFreeCable = "StationFreeCable";
             }
+            public readonly string StationFreeCable = "~/Views/Cable/StationFreeCable.cshtml";
         }
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public partial class T4MVC_T4OWBController : TCI.Controllers.T4OWBController
+    public partial class T4MVC_CableController : TCI.Controllers.CableController
     {
-        public T4MVC_T4OWBController() : base(Dummy.Instance) { }
+        public T4MVC_CableController() : base(Dummy.Instance) { }
 
         [NonAction]
-        partial void IndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+        partial void StationFreeCableOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, int stationId);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Index()
+        public override System.Web.Mvc.ActionResult StationFreeCable(int stationId)
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
-            IndexOverride(callInfo);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.StationFreeCable);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "stationId", stationId);
+            StationFreeCableOverride(callInfo, stationId);
             return callInfo;
         }
 

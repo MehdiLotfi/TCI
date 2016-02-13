@@ -1,4 +1,8 @@
-﻿using TCI.DomainService.Fiber.Interface;
+﻿using System.Collections.Generic;
+using System.Linq;
+using AutoMapper.QueryableExtensions;
+using TCI.DomainService.Fiber.Interface;
+using TCI.Mapper.Fiber;
 using TCI.Operation.Fiber.Interface;
 
 namespace TCI.Operation.Fiber
@@ -8,6 +12,14 @@ namespace TCI.Operation.Fiber
         public CableOperation(ICableService baseService)
             : base(baseService)
         {
+            (new CableMapper()).Initialize();
+        }
+
+        public List<Model.Cable> GetStationCable(int stationId)
+        {
+            return BaseService.GetAll(x => x.FromStationId == stationId || x.ToStationId == stationId)
+                .ProjectTo<Model.Cable>()
+                .ToList();
         }
     }
 }

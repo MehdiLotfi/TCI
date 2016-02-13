@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<TCI.Model.OcdfRoom>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @*@Html.ActionLink("Create New", "Create")*@
 </p>
 <table class="table">
     <tr>
@@ -24,9 +24,9 @@
                 ...
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.OcdfRoomId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.OcdfRoomId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.OcdfRoomId })
+                @*@Html.ActionLink("Edit", "Edit", new { id = item.OcdfRoomId }) |*@
+                @Html.ActionLink("Details", MVC.Ocdf.Index(item.OcdfRoomId)) 
+                @*@Html.ActionLink("Delete", "Delete", new { id = item.OcdfRoomId })*@
             </td>
         </tr>
     }

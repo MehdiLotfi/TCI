@@ -20,7 +20,9 @@ using System.Reflection;
 using TCI.DataAccess.Context;
 using TCI.DataAccess.Interface;
 using TCI.DomainService;
+using TCI.DomainService.Fiber.Interface;
 using TCI.Operation;
+using TCI.Operation.Fiber.Interface;
 
 namespace TCI.DependencyResolution
 {
@@ -41,6 +43,7 @@ namespace TCI.DependencyResolution
                 });
                 cfg.For<IFiberUnitOfWork>().Use<FiberContext>();
             });
+
             return container;
             //new Container(c => c.AddRegistry<DefaultRegistry>());
         }

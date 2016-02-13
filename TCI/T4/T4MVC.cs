@@ -27,13 +27,13 @@ using T4MVC;
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static partial class MVC
 {
+    public static TCI.Controllers.CableController Cable = new TCI.Controllers.T4MVC_CableController();
     public static TCI.Controllers.CableRoomController CableRoom = new TCI.Controllers.T4MVC_CableRoomController();
     public static TCI.Controllers.HomeController Home = new TCI.Controllers.T4MVC_HomeController();
+    public static TCI.Controllers.OcdfController Ocdf = new TCI.Controllers.T4MVC_OcdfController();
     public static TCI.Controllers.OcdfRoomController OcdfRoom = new TCI.Controllers.T4MVC_OcdfRoomController();
     public static TCI.Controllers.StationController Station = new TCI.Controllers.T4MVC_StationController();
-    public static TCI.Controllers.T4OWBController T4OWB = new TCI.Controllers.T4MVC_T4OWBController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
-    public static T4MVC.TestController Test = new T4MVC.TestController();
 }
 
 namespace T4MVC

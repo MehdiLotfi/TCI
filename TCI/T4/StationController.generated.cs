@@ -96,7 +96,7 @@ namespace TCI.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionParamsClass_Details
         {
-            public readonly string id = "id";
+            public readonly string stationId = "stationId";
         }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -133,14 +133,14 @@ namespace TCI.Controllers
         }
 
         [NonAction]
-        partial void DetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, int id);
+        partial void DetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, int stationId);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Details(int id)
+        public override System.Web.Mvc.ActionResult Details(int stationId)
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Details);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "id", id);
-            DetailsOverride(callInfo, id);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "stationId", stationId);
+            DetailsOverride(callInfo, stationId);
             return callInfo;
         }
 

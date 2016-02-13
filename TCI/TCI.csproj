@@ -154,13 +154,18 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
+    <Compile Include="Controllers\CableController.cs" />
+    <Compile Include="Controllers\OcdfController.cs" />
     <Compile Include="Controllers\OcdfRoomController.cs" />
+    <Compile Include="Controllers\StationController.cs" />
+    <Compile Include="T4\CableController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="T4\CableRoomController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\CableRoomController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\StationController.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
@@ -178,6 +183,9 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="T4\OcdfController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="T4\OcdfRoomController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -192,12 +200,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
-    <Compile Include="T4\T4OWBController.generated.cs">
-      <DependentUpon>T4MVC.tt</DependentUpon>
-    </Compile>
-    <Compile Include="T4\TestController.generated.cs">
-      <DependentUpon>T4MVC.tt</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -206,11 +208,15 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Station\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Station\Details.cshtml" />
     <Content Include="Views\CableRoom\Index.cshtml" />
     <None Include="T4\T4MVC.tt.hooks.t4" />
     <Content Include="Views\OcdfRoom\Index.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Cable\StationFreeCable.cshtml" />
+    <Content Include="Views\Ocdf\Index.cshtml" />
+    <Content Include="Views\OcdfRoom\Details.cshtml" />
+    <Content Include="Views\Ocdf\Details.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

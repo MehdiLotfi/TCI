@@ -1,0 +1,55 @@
+﻿@model TCI.Model.Ocdf
+
+<H2>
+    @Model.OcdfId
+    @Model.Name
+</H2>
+<table>
+    <tr>
+        <td class="cable"></td>
+        <td class="CableAndSectionSpace"></td>
+        <td class="Section">
+            @foreach (var section in Model.Sections)
+            {
+                <div>
+                    @Html.DisplayFor(modelView => @section.SectionId)
+                    @Html.DisplayFor(modelView => @section.Name)
+                </div>
+                <div>
+                    @foreach (var cassette in section.Cassettes)
+                    {
+                        <div>
+                            @Html.DisplayFor(modelView => @cassette.CassetteId)
+                            @Html.DisplayFor(modelView => @cassette.Name)
+                        </div>
+                    }
+                </div>
+            }
+        </td>
+        <td class="SectionAndOdfSpace"></td>
+        <td class="Odf">
+            @foreach (var odf in Model.Odfs)
+            {
+                <div>
+                    @Html.DisplayFor(modelview => odf.OdfId)
+                    @Html.DisplayFor(modelview => odf.Name)
+
+                    @foreach (var odfItemGroup in odf.OdfItemGroups)
+                    {
+                        <div>
+                            @Html.DisplayFor(modelview=>odfItemGroup.Number)
+                            <div>
+                                @Html.DisplayFor(modelview => odfItemGroup.FirstOdfItem.OdfItemId)
+                            </div>
+                            <div>
+                                @Html.DisplayFor(modelview => odfItemGroup.SecondOdfItem.OdfItemId)
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </td>
+        <td class="OdfAndLineSystemSpace"></td>
+        <td class="LineSystem"></td>
+    </tr>
+</table>

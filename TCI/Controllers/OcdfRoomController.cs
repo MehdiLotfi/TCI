@@ -17,5 +17,11 @@ namespace TCI.Controllers
             var ocdfRooms = _ocdfRoomOperation.GetByStation(stationId);
             return PartialView(ocdfRooms);
         }
+
+        public virtual ActionResult Details(int ocdfRoomId)
+        {
+            var ocdfRoom = _ocdfRoomOperation.GetDetails(ocdfRoomId);
+            return PartialView(ocdfRoom);
+        }
     }
 }

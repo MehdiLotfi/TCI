@@ -47,11 +47,14 @@
     <Compile Include="Model\Ctr\Executer.cs" />
     <Compile Include="Model\Fiber\Cable.cs" />
     <Compile Include="Model\Fiber\CableRoom.cs" />
+    <Compile Include="Model\Fiber\Cassette.cs" />
     <Compile Include="Model\Fiber\FiberPlan.cs" />
     <Compile Include="Model\Fiber\LineSystem.cs" />
     <Compile Include="Model\Fiber\Ocdf.cs" />
     <Compile Include="Model\Fiber\OcdfRoom.cs" />
     <Compile Include="Model\Fiber\Odf.cs" />
+    <Compile Include="Model\Fiber\OdfItem.cs" />
+    <Compile Include="Model\Fiber\OdfItemGroup.cs" />
     <Compile Include="Model\Fiber\Section.cs" />
     <Compile Include="Model\Fiber\Station.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
