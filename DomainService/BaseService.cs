@@ -20,9 +20,9 @@ namespace TCI.DomainService
             _entities = unitOfWork.DbSet<TEntity>();
         }
 
-        public IQueryable<TEntity> GetAll()
+        public IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null)
         {
-            return _entities;
+            return predicate == null ? _entities : _entities.Where(predicate);
         }
 
         public TEntity GetFirst(Expression<Func<TEntity, bool>> predicate = null)

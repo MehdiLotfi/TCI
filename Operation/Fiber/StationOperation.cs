@@ -9,5 +9,10 @@ namespace TCI.Operation.Fiber
             : base(stationService)
         {
         }
+
+        public Model.Station GetDetails(int id)
+        {
+            return AutoMapper.Mapper.Map<Model.Station>(BaseService.GetFirst(x => x.StationId == id));
+        }
     }
 }

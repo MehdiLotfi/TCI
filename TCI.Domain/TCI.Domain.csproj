@@ -57,6 +57,7 @@
     <Compile Include="Domain\Fiber\LineSystem.cs" />
     <Compile Include="Domain\Fiber\Ocdf.cs" />
     <Compile Include="Domain\Fiber\OcdfLink.cs" />
+    <Compile Include="Domain\Fiber\OcdfRoom.cs" />
     <Compile Include="Domain\Fiber\Odf.cs" />
     <Compile Include="Domain\Fiber\Section.cs" />
     <Compile Include="Domain\Fiber\Station.cs" />

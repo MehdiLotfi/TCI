@@ -8,7 +8,7 @@ namespace TCI.DomainService
     public interface IBaseService<TEntity>
         where TEntity : BaseEntity
     {
-        IQueryable<TEntity> GetAll();
+        IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null);
         TEntity GetFirst(Expression<Func<TEntity, bool>> predicate = null);
 
         void Add(TEntity entity);

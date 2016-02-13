@@ -1,4 +1,6 @@
-﻿using TCI.DataAccess.Interface;
+﻿using System.Data.Entity;
+using TCI.DataAccess.Interface;
+using TCI.Domain;
 
 namespace TCI.DataAccess.Context
 {
@@ -8,5 +10,9 @@ namespace TCI.DataAccess.Context
             : base("FiberConnectionString")
         {
         }
+
+        public DbSet<Station> Stations { get; set; }
+        public DbSet<CableRoom> CableRooms { get; set; }
+        public DbSet<OcdfRoom> OcdfRooms { get; set; }
     }
 }
