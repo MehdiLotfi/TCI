@@ -1,4 +1,7 @@
-﻿namespace TCI.Model
+﻿using System.Collections;
+using System.Collections.Generic;
+
+namespace TCI.Model
 {
     public class Cable : BaseModel
     {
@@ -12,5 +15,7 @@
 
         public string FullName
             => LozCount + "*" + CoreCount + (ExtendedLozCount == 0 ? "" : ExtendedLozCount + "*" + ExtendedCoreCount);
+
+        public IList<Loz> Lozes { get; set; }
     }
 }

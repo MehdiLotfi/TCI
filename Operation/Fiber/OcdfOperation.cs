@@ -17,6 +17,11 @@ namespace TCI.Operation.Fiber
             (new CassetteMapper()).Initialize();
             (new OdfMapper()).Initialize();
             (new OdfItemMapper()).Initialize();
+            (new LineSystemMapper()).Initialize();
+            (new LineSystemItemMapper()).Initialize();
+            (new CableMapper()).Initialize();
+            (new LozMapper()).Initialize();
+            (new CoreMapper()).Initialize();
         }
 
         public List<Model.Ocdf> GetByOcdfRoomId(int ocdfRoomId)
@@ -27,7 +32,21 @@ namespace TCI.Operation.Fiber
         public Model.Ocdf GetDetails(int ocdfId)
         {
             return AutoMapper.Mapper.Map<Model.Ocdf>(BaseService.GetFirst(x => x.OcdfId == ocdfId,
-                    new List<string> { "Sections", "Sections.Cassettes", "Odfs","Odfs.OdfItems" }));
+                new List<string>
+                {
+                    "Sections",
+                    "Sections.Cassettes",
+                    "Odfs",
+                    "Odfs.OdfItems",
+                    "LineSystems",
+                    "LineSystems.LineSystemItems",
+                    "FromCables",
+                    "ToCables",
+                    "FromCables.Lozes",
+                    "ToCables.Lozes",
+                    "FromCables.Lozes.Cores",
+                    "ToCables.Lozes.Cores"
+                }));
         }
     }
 }

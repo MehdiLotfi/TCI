@@ -6,7 +6,32 @@
 </H2>
 <table>
     <tr>
-        <td class="cable"></td>
+        <td class="cable">
+            @foreach (var cable in Model.Cables)
+            {
+                <div>
+                    @Html.DisplayFor(modelview=>cable.FullName)
+                    @foreach (var loz in cable.Lozes)
+                    {
+                        <div>
+                            @Html.DisplayFor(modelview=>loz.Number)
+                            @foreach (var coreGroup in loz.CoreGroups)
+                            {
+                                <div>
+                                    @Html.DisplayFor(modelview=>coreGroup.Number)
+                                    <div>
+                                        @Html.DisplayFor(modelview=>coreGroup.FirstCore.Number)
+                                    </div>
+                                    <div>
+                                        @Html.DisplayFor(modelview => coreGroup.SecondCore.Number)
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+        </td>
         <td class="CableAndSectionSpace"></td>
         <td class="Section">
             @foreach (var section in Model.Sections)
@@ -50,6 +75,20 @@
             }
         </td>
         <td class="OdfAndLineSystemSpace"></td>
-        <td class="LineSystem"></td>
+        <td class="LineSystem">
+            @foreach (var lineSystem in Model.LineSystems)
+            {
+                <div>
+                    @Html.DisplayFor(modelview => lineSystem.LineSystemId)
+                    @Html.DisplayFor(modelview=>lineSystem.Name)
+                    @foreach (var lineSystemItem in lineSystem.LineSystemItems)
+                    {
+                        <div>
+                            @Html.DisplayFor(modelview=>lineSystemItem.LineSystemItemId)
+                        </div>
+                    }
+                </div>
+            }
+        </td>
     </tr>
 </table>

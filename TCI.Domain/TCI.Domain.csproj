@@ -54,8 +54,11 @@
     <Compile Include="Domain\Fiber\Cable.cs" />
     <Compile Include="Domain\Fiber\CableRoom.cs" />
     <Compile Include="Domain\Fiber\Cassette.cs" />
+    <Compile Include="Domain\Fiber\Core.cs" />
     <Compile Include="Domain\Fiber\FiberPlan.cs" />
     <Compile Include="Domain\Fiber\LineSystem.cs" />
+    <Compile Include="Domain\Fiber\LineSystemItem.cs" />
+    <Compile Include="Domain\Fiber\Loz.cs" />
     <Compile Include="Domain\Fiber\Ocdf.cs" />
     <Compile Include="Domain\Fiber\OcdfLink.cs" />
     <Compile Include="Domain\Fiber\OcdfRoom.cs" />

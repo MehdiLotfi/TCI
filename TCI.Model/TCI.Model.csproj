@@ -48,8 +48,12 @@
     <Compile Include="Model\Fiber\Cable.cs" />
     <Compile Include="Model\Fiber\CableRoom.cs" />
     <Compile Include="Model\Fiber\Cassette.cs" />
+    <Compile Include="Model\Fiber\Core.cs" />
+    <Compile Include="Model\Fiber\CoreGroup.cs" />
     <Compile Include="Model\Fiber\FiberPlan.cs" />
     <Compile Include="Model\Fiber\LineSystem.cs" />
+    <Compile Include="Model\Fiber\LineSystemItem.cs" />
+    <Compile Include="Model\Fiber\Loz.cs" />
     <Compile Include="Model\Fiber\Ocdf.cs" />
     <Compile Include="Model\Fiber\OcdfRoom.cs" />
     <Compile Include="Model\Fiber\Odf.cs" />

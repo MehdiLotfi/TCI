@@ -19,7 +19,12 @@ namespace TCI.Domain
         public bool IsASide { get; set; }
         public int BayNumber { get; set; }
         public int BayCount { get; set; }
+        [InverseProperty("FromOcdf")]
+        public ICollection<Cable> FromCables { get; set; }
+        [InverseProperty("ToOcdf")]
+        public ICollection<Cable> ToCables { get; set; }
         public ICollection<Section> Sections { get; set; }
         public ICollection<Odf> Odfs { get; set; }
+        public ICollection<LineSystem> LineSystems { get; set; }
     }
 }
