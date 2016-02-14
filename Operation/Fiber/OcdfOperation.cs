@@ -26,7 +26,7 @@ namespace TCI.Operation.Fiber
 
         public List<Model.Ocdf> GetByOcdfRoomId(int ocdfRoomId)
         {
-            return BaseService.GetAll(x => x.OcdfRoomId == ocdfRoomId).ProjectTo<Model.Ocdf>().ToList();
+            return AutoMapper.Mapper.Map<List<Model.Ocdf>>(BaseService.GetAll(x => x.OcdfRoomId == ocdfRoomId).ToList());
         }
 
         public Model.Ocdf GetDetails(int ocdfId)

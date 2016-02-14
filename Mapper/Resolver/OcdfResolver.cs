@@ -9,8 +9,9 @@ namespace TCI.Mapper.Resolver
         protected override List<Model.Cable> ResolveCore(Domain.Ocdf source)
         {
             if (source == null) return null;
-            var result = AutoMapper.Mapper.Map<List<Model.Cable>>(source.FromCables.ToList());
-            result.AddRange(AutoMapper.Mapper.Map<List<Model.Cable>>(source.ToCables.ToList()));
+            var result = new List<Model.Cable>();
+            if (source.FromCables != null) result.AddRange(AutoMapper.Mapper.Map<List<Model.Cable>>(source.FromCables.ToList()));
+            if (source.ToCables != null) result.AddRange(AutoMapper.Mapper.Map<List<Model.Cable>>(source.ToCables.ToList()));
             return result;
         }
     }

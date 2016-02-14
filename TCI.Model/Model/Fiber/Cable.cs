@@ -17,5 +17,10 @@ namespace TCI.Model
             => LozCount + "*" + CoreCount + (ExtendedLozCount == 0 ? "" : ExtendedLozCount + "*" + ExtendedCoreCount);
 
         public IList<Loz> Lozes { get; set; }
+
+        public Cable()
+        {
+            Lozes = new List<Loz>();
+        }
     }
 }

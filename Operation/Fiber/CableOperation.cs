@@ -17,9 +17,7 @@ namespace TCI.Operation.Fiber
 
         public List<Model.Cable> GetStationCable(int stationId)
         {
-            return BaseService.GetAll(x => x.FromStationId == stationId || x.ToStationId == stationId)
-                .ProjectTo<Model.Cable>()
-                .ToList();
+            return AutoMapper.Mapper.Map<List<Model.Cable>>(BaseService.GetAll(x => x.FromStationId == stationId || x.ToStationId == stationId).ToList());
         }
     }
 }
