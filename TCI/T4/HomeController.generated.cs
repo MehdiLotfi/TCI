@@ -59,6 +59,18 @@ namespace TCI.Controllers
             return RedirectToActionPermanent(taskResult.Result);
         }
 
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult _Alert()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames._Alert);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult Alert()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Alert);
+        }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public HomeController Actions { get { return MVC.Home; } }
@@ -76,15 +88,35 @@ namespace TCI.Controllers
         public class ActionNamesClass
         {
             public readonly string Index = "Index";
+            public readonly string _Alert = "_Alert";
+            public readonly string Alert = "Alert";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Index = "Index";
+            public const string _Alert = "_Alert";
+            public const string Alert = "Alert";
         }
 
 
+        static readonly ActionParamsClass__Alert s_params__Alert = new ActionParamsClass__Alert();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass__Alert _AlertParams { get { return s_params__Alert; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass__Alert
+        {
+            public readonly string id = "id";
+        }
+        static readonly ActionParamsClass_Alert s_params_Alert = new ActionParamsClass_Alert();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Alert AlertParams { get { return s_params_Alert; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Alert
+        {
+            public readonly string model = "model";
+        }
         static readonly ViewsClass s_views = new ViewsClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewsClass Views { get { return s_views; } }
@@ -98,6 +130,19 @@ namespace TCI.Controllers
                 public readonly string Index = "Index";
             }
             public readonly string Index = "~/Views/Home/Index.cshtml";
+            static readonly _PartialClass s_Partial = new _PartialClass();
+            public _PartialClass Partial { get { return s_Partial; } }
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public partial class _PartialClass
+            {
+                static readonly _ViewNamesClass s_ViewNames = new _ViewNamesClass();
+                public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
+                public class _ViewNamesClass
+                {
+                    public readonly string _Alert = "_Alert";
+                }
+                public readonly string _Alert = "~/Views/Home/Partial/_Alert.cshtml";
+            }
         }
     }
 
@@ -114,6 +159,30 @@ namespace TCI.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Index);
             IndexOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void _AlertOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, int? id);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult _Alert(int? id)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames._Alert);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "id", id);
+            _AlertOverride(callInfo, id);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void AlertOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, TCI.Models.Persons model);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Alert(TCI.Models.Persons model)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Alert);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "model", model);
+            AlertOverride(callInfo, model);
             return callInfo;
         }
 

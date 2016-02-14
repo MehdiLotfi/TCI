@@ -125,6 +125,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Ocdf.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\toastr.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -135,11 +136,16 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\app_globalresource-en.js" />
+    <Content Include="Scripts\app_globalresource-fa.Js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\Custom-js.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-migrate.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
@@ -150,6 +156,7 @@
       <LastGenOutput>T4MVC.cs</LastGenOutput>
     </None>
     <None Include="T4\T4MVC.tt.settings.xml" />
+    <Content Include="Scripts\toastr.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -159,6 +166,8 @@
     <Compile Include="Controllers\OcdfController.cs" />
     <Compile Include="Controllers\OcdfRoomController.cs" />
     <Compile Include="Controllers\StationController.cs" />
+    <Compile Include="Models\HttpStatusCode.cs" />
+    <Compile Include="Models\Persons.cs" />
     <Compile Include="T4\CableController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -218,6 +227,7 @@
     <Content Include="Views\Ocdf\Index.cshtml" />
     <Content Include="Views\OcdfRoom\Details.cshtml" />
     <Content Include="Views\Ocdf\Details.cshtml" />
+    <Content Include="Views\Home\Partial\_Alert.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -227,9 +237,12 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\App_GlobalResource\App_GlobalResource.csproj">
+      <Project>{fcf2988d-d7fd-44d5-a3e2-0d4f497f4702}</Project>
+      <Name>App_GlobalResource</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\TCI.DataAccess.csproj">
       <Project>{4204DEBC-B59E-4EFB-B286-0D418F06ED51}</Project>
       <Name>TCI.DataAccess</Name>
