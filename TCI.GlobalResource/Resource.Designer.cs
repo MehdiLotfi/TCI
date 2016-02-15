@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace App_GlobalResource {
+namespace TCI.GlobalResource {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace App_GlobalResource {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("App_GlobalResource.Resource", typeof(Resource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TCI.GlobalResource.Resource", typeof(Resource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace App_GlobalResource {
         /// <summary>
         ///   Looks up a localized string similar to fa.
         /// </summary>
-        public static string Abbrvation {
+        public static string Abbreviation {
             get {
-                return ResourceManager.GetString("Abbrvation", resourceCulture);
+                return ResourceManager.GetString("Abbreviation", resourceCulture);
             }
         }
     }

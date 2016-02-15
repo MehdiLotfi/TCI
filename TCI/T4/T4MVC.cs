@@ -75,11 +75,11 @@ namespace Links
         private const string URLPATH = "~/Scripts";
         public static string Url() { return T4MVCHelpers.ProcessVirtualPath(URLPATH); }
         public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(URLPATH + "/" + fileName); }
-        public static readonly string app_globalresource_en_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/app_globalresource-en.min.js") ? Url("app_globalresource-en.min.js") : Url("app_globalresource-en.js");
-        public static readonly string app_globalresource_fa_Js = Url("app_globalresource-fa.Js");
         public static readonly string bootstrap_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/bootstrap.min.js") ? Url("bootstrap.min.js") : Url("bootstrap.js");
         public static readonly string bootstrap_min_js = Url("bootstrap.min.js");
         public static readonly string Custom_js_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/Custom-js.min.js") ? Url("Custom-js.min.js") : Url("Custom-js.js");
+        public static readonly string globalresource_en_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/globalresource-en.min.js") ? Url("globalresource-en.min.js") : Url("globalresource-en.js");
+        public static readonly string globalresource_fa_Js = Url("globalresource-fa.Js");
         public static readonly string jquery_1_10_2_intellisense_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-1.10.2.intellisense.min.js") ? Url("jquery-1.10.2.intellisense.min.js") : Url("jquery-1.10.2.intellisense.js");
         public static readonly string jquery_1_10_2_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery-1.10.2.min.js") ? Url("jquery-1.10.2.min.js") : Url("jquery-1.10.2.js");
         public static readonly string jquery_1_10_2_min_js = Url("jquery-1.10.2.min.js");
@@ -92,6 +92,7 @@ namespace Links
         public static readonly string jquery_validate_unobtrusive_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/jquery.validate.unobtrusive.min.js") ? Url("jquery.validate.unobtrusive.min.js") : Url("jquery.validate.unobtrusive.js");
         public static readonly string jquery_validate_unobtrusive_min_js = Url("jquery.validate.unobtrusive.min.js");
         public static readonly string modernizr_2_6_2_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/modernizr-2.6.2.min.js") ? Url("modernizr-2.6.2.min.js") : Url("modernizr-2.6.2.js");
+        public static readonly string toastr_min_js = Url("toastr.min.js");
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -103,6 +104,7 @@ namespace Links
         public static readonly string bootstrap_min_css = Url("bootstrap.min.css");
         public static readonly string Ocdf_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/Ocdf.min.css") ? Url("Ocdf.min.css") : Url("Ocdf.css");
         public static readonly string Site_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(URLPATH + "/Site.min.css") ? Url("Site.min.css") : Url("Site.css");
+        public static readonly string toastr_min_css = Url("toastr.min.css");
     }
 
     
@@ -113,10 +115,10 @@ namespace Links
         {
             public static class Assets
             {
-                public const string app_globalresource_en_js = "~/Scripts/app_globalresource-en.js"; 
                 public const string bootstrap_js = "~/Scripts/bootstrap.js"; 
                 public const string bootstrap_min_js = "~/Scripts/bootstrap.min.js"; 
                 public const string Custom_js_js = "~/Scripts/Custom-js.js"; 
+                public const string globalresource_en_js = "~/Scripts/globalresource-en.js"; 
                 public const string jquery_1_10_2_intellisense_js = "~/Scripts/jquery-1.10.2.intellisense.js"; 
                 public const string jquery_1_10_2_js = "~/Scripts/jquery-1.10.2.js"; 
                 public const string jquery_1_10_2_min_js = "~/Scripts/jquery-1.10.2.min.js"; 
@@ -127,6 +129,7 @@ namespace Links
                 public const string jquery_validate_unobtrusive_js = "~/Scripts/jquery.validate.unobtrusive.js"; 
                 public const string jquery_validate_unobtrusive_min_js = "~/Scripts/jquery.validate.unobtrusive.min.js"; 
                 public const string modernizr_2_6_2_js = "~/Scripts/modernizr-2.6.2.js"; 
+                public const string toastr_min_js = "~/Scripts/toastr.min.js"; 
             }
         }
         public static partial class Content 
@@ -137,6 +140,7 @@ namespace Links
                 public const string bootstrap_min_css = "~/Content/bootstrap.min.css";
                 public const string Ocdf_css = "~/Content/Ocdf.css";
                 public const string Site_css = "~/Content/Site.css";
+                public const string toastr_min_css = "~/Content/toastr.min.css";
             }
         }
     }

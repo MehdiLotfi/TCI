@@ -25,13 +25,13 @@
             </div>
         </div>
     </div>
-<div class="container body-content">
-    @RenderBody()
-    <hr/>
-    <footer>
-        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-    </footer>
-</div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr/>
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
     <div id="sectionContents"></div>
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/jquery-migrate.min.js"></script>
@@ -41,7 +41,7 @@
     <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
     @RenderSection(name: "scripts", required: false)
     <script src="~/Scripts/Custom-js.js"></script>
-    <script src="~/Scripts/app_globalresource-@(App_GlobalResource.Resource.Abbrvation).js"></script>
+    <script src="~/Scripts/globalresource-@(TCI.GlobalResource.Resource.Abbreviation).Js"></script>
     <script src="~/Scripts/toastr.min.js"></script>
 </body>
 </html>

@@ -136,8 +136,8 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\app_globalresource-en.js" />
-    <Content Include="Scripts\app_globalresource-fa.Js" />
+    <Content Include="Scripts\globalresource-en.js" />
+    <Content Include="Scripts\globalresource-fa.Js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Custom-js.js" />
@@ -239,10 +239,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\App_GlobalResource\App_GlobalResource.csproj">
-      <Project>{fcf2988d-d7fd-44d5-a3e2-0d4f497f4702}</Project>
-      <Name>App_GlobalResource</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DataAccess\TCI.DataAccess.csproj">
       <Project>{4204DEBC-B59E-4EFB-B286-0D418F06ED51}</Project>
       <Name>TCI.DataAccess</Name>
@@ -258,6 +254,10 @@
     <ProjectReference Include="..\TCI.Domain\TCI.Domain.csproj">
       <Project>{77ec1366-2803-4396-bab1-a2cacdccc058}</Project>
       <Name>TCI.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TCI.GlobalResource\TCI.GlobalResource.csproj">
+      <Project>{9a3033e6-c6f8-4dbf-8a0a-dfeff69880d3}</Project>
+      <Name>TCI.GlobalResource</Name>
     </ProjectReference>
     <ProjectReference Include="..\TCI.Model\TCI.Model.csproj">
       <Project>{35c0d914-bafc-4383-b1c7-b79bb5df1c2a}</Project>

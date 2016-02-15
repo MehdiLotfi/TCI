@@ -1,16 +1,17 @@
 ﻿/**
- * دیالوگ پیش فرض اینجا میشینه
- *  شما میتونی تغییر بدی بعدا
+ * 
  * @returns {} 
  */
 function partial_section() { return "#sectionContents"; }
+
 /**
- * iهر جا خواستی
+ * 
  * @returns {} 
  */
 function closeDialog() {
     $(partial_section()).empty();
 }
+
 /**
  * 
  * @param {} data 
@@ -24,9 +25,7 @@ function InsertDialog(data) {
     h += "</div><div class='modal-footer'><input onclick='$(\"#btnSave\").click();' type='submit' value=\"Submit\" class='btn btn-default'/><button type='button' onclick='$(\"#portlet-form\").hide();' class='btn btn-default' data-dismiss='modal'><i class=\"fa fa-close\"></i> Close</button></div></div></div></div>";
     $("#sectionContents").html(h);
 }
-/**
- * 
- */
+
 $("[load-partial]").live("click", function () {
     var html = $(partial_section()).load($(this).attr("load-partial"), function() {
         InsertDialog(html.html());
@@ -39,7 +38,7 @@ var httpStatusCode = { Remove_Success: 151, Remove_Failed: 152, Input_Invalid: 1
 function SuccessModel(data) {
     if (data.StatusCode === httpStatusCode.Created_Page)
     {
-        showMessage('', initializeculture.Authorize_Has_Been_Successfully/*برای تست*/, "success");
+        showMessage('', initializeculture.Authorize_Has_Been_Successfully, "success");
     }
     closeDialog();
 }

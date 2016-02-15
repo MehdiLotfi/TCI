@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("App_GlobalResource")]
+[assembly: AssemblyTitle("TCI.GlobalResource")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("App_GlobalResource")]
+[assembly: AssemblyProduct("TCI.GlobalResource")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("fcf2988d-d7fd-44d5-a3e2-0d4f497f4702")]
+[assembly: Guid("9a3033e6-c6f8-4dbf-8a0a-dfeff69880d3")]
 
 // Version information for an assembly consists of the following four values:
 //
